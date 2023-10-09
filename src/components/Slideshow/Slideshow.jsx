@@ -45,7 +45,4 @@ const Slideshow = ({images}) => {
     )
 }
 
-/*key={index}
-className={`count ${index === currentIndex ? "active" : ""}`}  
-*/
 export default Slideshow
