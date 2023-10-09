@@ -1,0 +1,22 @@
+@import '../../scss/mixins';
+
+/******* About section *******/
+.about {
+    display: flex;
+    flex-direction: column;
+
+    .about-banner {
+        min-height: 100px;
+    }
+
+    .about-collapse {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 50px;
+        gap: 15px;
+
+        @include mobile {
+            padding: 20px 0;
+        }
+    }
+}

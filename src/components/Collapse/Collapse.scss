@@ -1,0 +1,73 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.collapse {
+    position: relative;
+    color: $color-white;
+    min-width: 48%;
+    box-sizing: border-box;
+    
+    p {
+        background: $color-principal;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem;
+
+        @include mobile {
+            border-radius: 5px;
+        }
+        
+    }
+
+    .collapse-menu {
+        position: relative;
+        z-index: -1;
+        color: $color-principal;
+        animation: loadContent .6s both;
+    
+        &_content {
+            padding: 15px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: $color-grey;
+        }
+    }
+
+    .collapse-arrow {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        cursor: pointer;
+        animation: rotateRight .5s both;
+    
+        &_down {
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            cursor: pointer;
+            animation: rotateLeft .5s both;
+        }
+    }
+}
+
+/********** Collapse menu animation **********/
+@keyframes rotateLeft {
+    from { transform: rotate(0); } 
+    to { transform: rotate(-180deg);}
+}
+
+@keyframes rotateRight {
+    from { transform: rotate(-180deg); } 
+    to { transform: rotate(0);}
+}
+
+@keyframes loadContent {
+    from {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
