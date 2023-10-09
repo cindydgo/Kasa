@@ -1,0 +1,17 @@
+@import '../../scss/mixins';
+
+.host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+
+    @include mobile {
+        gap: 10px;
+    }
+
+    .host-picture {
+        border-radius: 50%;
+        width: 55px;
+    }
+}

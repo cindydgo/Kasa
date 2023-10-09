@@ -1,0 +1,16 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.stars-container {
+    display: flex;
+    position: relative;
+
+    .star {
+        width: 15px;
+        margin:  10px 0 0 8px;
+
+        @include mobile {
+            width: 13px;
+        }
+    }
+}

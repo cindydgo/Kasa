@@ -1,0 +1,81 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+
+.section-location {
+    color: $color-principal;
+    margin-bottom: 35px;
+
+    p, span {
+        font-size: 14px;
+    }
+
+    .location {
+        @include flex-column;
+        gap: 20px;
+        
+        .location-desc {
+            display: flex;
+            justify-content: space-between;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            &_column {
+                @include flex-column;
+                gap: 15px;
+            }
+        }
+
+        .location-info {
+            @include flex-column;
+
+            h1 {
+                font-weight: 600;
+            } 
+        }
+
+        .location-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            span  {
+                background: $color-principal;
+                color: $color-white;
+                border-radius: 6px;
+                padding: 4px 25px;
+                height: 25px;
+                box-sizing: border-box;
+            }
+        }
+
+        .location-host {
+            @include flex-column;
+
+            @include mobile {
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        
+        .location-collapse {
+            display: flex;
+            justify-content: space-between;
+
+            @include mobile {
+                flex-direction: column;
+                width: 100%;
+                gap: 20px;
+            }
+
+            &_equipment {
+                list-style-type: none;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,52 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.carousel-container {
+    position: relative;
+
+    .count {
+        position: absolute;
+        bottom: 20px;
+        color: $color-white;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.arrow-left {
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+
+    @include mobile {
+        top: 120px;
+        width: 34px;
+    }
+}
+
+.arrow-right {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    cursor: pointer;
+
+    @include mobile {
+        top: 120px;
+        width: 34px;
+    }
+}
+
+.slide {
+    img {
+        width: 100%;
+        height: 300px;
+        border-radius: 25px;
+        object-fit: cover;
+
+        /*@include mobile {
+            height: 255px;
+        }*/
+    }
+}
