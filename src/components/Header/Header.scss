@@ -1,0 +1,34 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.header-nav {
+    @include space-between;
+    height: 80px;
+
+    img {
+        @include mobile {
+            height: 35px;
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 30px;
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-principal;
+        cursor: pointer;
+
+        @include mobile {
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+}
