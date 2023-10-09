@@ -1,10 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Error from './pages/Error.jsx'
-import Header from './components/Header/Header.jsx'
-import Footer from './components/Footer/Footer.jsx'
+import Home from './pages/Home'
+import AboutPage from './pages/AboutPage'
+import ErrorPage from './pages/ErrorPage'
+import Accomodation from './pages/Accomodation'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 //Header and Footer components are apart of our app layout
 function Routers() {
@@ -13,8 +14,9 @@ function Routers() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="*" element={<Error />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path='/logements/:id' element={<Accomodation />} />
+                <Route path="*" element={<ErrorPage />}  />
             </Routes>
             <Footer />
         </Router>
